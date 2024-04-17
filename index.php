@@ -19,16 +19,18 @@
 <body>
 
     <main>
-        <div class="col-8 m-auto d-flex flex-column justify-center-align-items-center h-100 id=app">
+        <div class="col-8 m-auto d-flex flex-column justify-content-center align-items-center h-100" id="app">
             <h1>dischi</h1>
-                <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-3" id="container">
-                    <div v-for="(item, index) in data" key="index" class="card col-3">
-                        <img :src 
+
+                <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-2" id="container">
+                    <div v-for="(item, index) in data" key="index" class="card col-3 p-2 text-center">
+                        <img :src="item.poster" alt="">
+                        <div>{{item.title}}</div>
+                        <div>{{item.author}}</div>
+                        <div>{{item.year}}</div>
                     </div>
-                    
                 </div>
                         
-                
         </div>
     </main>
 </body>
