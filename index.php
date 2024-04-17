@@ -11,16 +11,25 @@
     <script src="https://unpkg.com/vue@3" defer></script>
     <!--javascript-->
     <script src="./asset/js/script.js" defer></script>
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
 
     <title>php-dischi-json</title>
 </head>
 <body>
-    <head>
-            <h1>dischi</h1>
-    </head>
 
     <main>
-
+        <div class="col-8 m-auto d-flex flex-column justify-center-align-items-center h-100 id=app">
+            <h1>dischi</h1>
+                <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-3" id="container">
+                    <div v-for="(item, index) in data" key="index" class="card col-3">
+                        <img :src 
+                    </div>
+                    
+                </div>
+                        
+                
+        </div>
     </main>
 </body>
 </html>
