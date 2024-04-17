@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="./asset/css/mine.css">
     <!--vuejs-->
     <script src="https://unpkg.com/vue@3" defer></script>
-    <!--javascript-->
-    <script src="./asset/js/script.js" defer></script>
     <!--axios-->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>php-dischi-json</title>
 </head>
 <body>
@@ -22,8 +19,8 @@
         <div class="col-8 m-auto d-flex flex-column justify-content-center align-items-center h-100" id="app">
             <h1>dischi</h1>
 
-                <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-2" id="container">
-                    <div v-for="(item, index) in data" key="index" class="card col-3 p-2 text-center">
+                <div class="bg-light col-12 d-flex flex-wrap pt-3 pb-3 justify-content-evenly gap-2" id="container">
+                <div v-for="(item, index) in data" :key="index" class="card col-3 p-2 text-center" @click="showcard(index)">
                         <img :src="item.poster" alt="">
                         <div>{{item.title}}</div>
                         <div>{{item.author}}</div>
@@ -34,4 +31,6 @@
         </div>
     </main>
 </body>
+<!--javascript-->
+<script src="./asset/js/script.js" defer></script>
 </html>
