@@ -2,12 +2,17 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #262626;
+    font-family: 'Rubik', sans-serif;
+    word-spacing: 2px;
+    height: 100vh;
+    font-weight: bold ;
+    background-color: #1d2d3c;
 }
+
 
 img{
     object-fit: contain;
@@ -16,9 +21,36 @@ img{
 
 .card{
     height:auto;
+    background-color: #112030;
 }
+
+li{
+    margin-left: 1em;
+}
+
+table{
+    border-spacing: 0;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 h1{
     font-size: 6rem;
     color:#e8e8e8;
 }
+
+a {
+    text-decoration: none ;
+}
+
+h5 {
+    margin: 0.5rem 0 ;
+    padding: 0 ;
+    color: #B6E1F2;
+}
+
