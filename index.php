@@ -20,7 +20,14 @@
 
     <main>
         <div id="app">
-            ciao
+            <h2>lista dischi</h2>
+
+            <ul>
+                <li v-for= "(disco,index) in data" :key="index">
+                    {{ disco.titolo }} - {{ disco.autore }}
+
+                </li>
+            </ul>
         </div>
     </main>
 
