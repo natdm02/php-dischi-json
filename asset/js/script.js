@@ -8,28 +8,45 @@ createApp({
             
             apiUrl: 'server.php',
             data:'',
+            dettagliodisco: '',
 
         }
 
     },
 
-    created(){
-        console.log("cre");
-    },
+    
 
     methods:{
 
         chiamataApi(){
-            console.log("api");
+            //console.log("api");
 
-            axios.get(this.apiurl)
+            axios.get(this.apiUrl)
             .then((response) => {
-                console.log("api2");
+                //console.log("api2");
                 this.data = response.data;
             })
-        }
+        },
+
+        showcard( index ) {
+
+            
+            const datoindice = {
+              discoindice: index
+            }
+      
+            
+            axios.post( this.apiUrl, datoindice, {headers: {'Content-Type':'multipart/form-data'}} )
+              .then( (res)=> {
+                  this.dettagliodisco = res.data;
+              })
     
-    }
+    },
+},
+    mounted(){
+        this.chiamataApi();
+    },
+
 
 
 }).mount('#app')

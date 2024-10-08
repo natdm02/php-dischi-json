@@ -19,31 +19,23 @@
 <body>
 
     <main>
-        <div id="app">
-            <h2>lista dischi</h2>
+        <div class="col-8 m-auto d-flex flex-column justify-content-center align-items-center h-100" id="app">
+            <h1>dischi</h1>
+            <h1 class="mb-0" style="color:black; font-family:Georgia, 'Times New Roman', Times, serif ">SPOTIFY</h1>
 
-            <ul>
-                <li v-for= "(disco,index) in data" :key="index">
-                    {{ disco.titolo }} - {{ disco.autore }}
-
-                </li>
-            </ul>
+        <div class="col-12 d-flex flex-wrap pt-3 pb-3 justify-content-evenly gap-2" id="container">
+        <div v-for="(item, index) in data" :key="index" class="card col-3 p-2 text-center" @click="showcard(index)">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img :src="item.poster" alt="">
+                <h5>{{item.title}}</h5>
+                <h5>{{item.author}}</h5>
+                <h5>{{item.year}}</h5>
+            </a>
         </div>
+        </div> 
     </main>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--javascript-->
