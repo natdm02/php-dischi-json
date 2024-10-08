@@ -7,10 +7,11 @@ createApp({
         return{
             
             apiUrl: 'server.php',
-            data:'',
-            dettagliodisco: '',
+            data: [],
+            dettagliodisco: {},
+            showModal: false,
 
-        }
+        };
 
     },
 
@@ -25,7 +26,7 @@ createApp({
             .then((response) => {
                 //console.log("api2");
                 this.data = response.data;
-            })
+            });
         },
 
         showcard( index ) {
@@ -33,13 +34,19 @@ createApp({
             
             const datoindice = {
               discoindice: index
-            }
+            };
       
             
-            axios.post( this.apiUrl, datoindice, {headers: {'Content-Type':'multipart/form-data'}} )
-              .then( (res)=> {
-                  this.dettagliodisco = res.data;
-              })
+            axios.post( this.apiUrl, datoindice, { headers: {'Content-Type':'multipart/form-data'}} )
+              .then( (response)=> {
+
+                  console.log(response.data);
+                  this.dettagliodisco = response.data;
+
+                  const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                  modal.show();
+              });
+            
     
     },
 },
