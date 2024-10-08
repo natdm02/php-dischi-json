@@ -22,8 +22,11 @@
         <!--montaggio app vue -->
         <div class="col-8 m-auto d-flex flex-column justify-content-center align-items-center h-100" id="app">
 
-            <h1>dischi</h1>
-            <h1 class="mb-0" style="color:black; font-family:Georgia, 'Times New Roman', Times, serif ">SPOTIFY</h1>
+        <div class="spotify-title">
+                SPOTIFY
+                <img src="./asset/img/spotify-icon.png" alt="Logo Spotify"> 
+            </div>
+            
 
         <div class="col-12 d-flex flex-wrap pt-3 pb-3 justify-content-evenly gap-2" id="container">
         <!--ciclo v-for -->
@@ -41,22 +44,23 @@
         </div> 
 
         <!--modal--> 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body card text-center">
-
-                        <img :src="dettagliodisco.poster" alt="">
-                            <h5>{{dettagliodisco.title}}</h5>
-                            <h5>{{dettagliodisco.author}}</h5>
-                    <div class="d-flex justify-content-center gap-3">
-                            <h5>YEAR: {{dettagliodisco.year}}</h5>
-                            <h5>GENERE: {{dettagliodisco.genre}}</h5>
-                    </div>
-                    </div>
+        <!--modal--> 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body card text-center">
+                <img :src="dettagliodisco.poster" alt="">
+                <h5>{{dettagliodisco.title}}</h5>
+                <h5>{{dettagliodisco.author}}</h5>
+                <div class="d-flex justify-content-center gap-3">
+                    <h5>YEAR: {{dettagliodisco.year}}</h5>
+                    <h5>GENERE: {{dettagliodisco.genre}}</h5>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
     </main>
 
 </body>
